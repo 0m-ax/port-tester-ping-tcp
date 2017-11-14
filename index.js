@@ -5,6 +5,7 @@ var server = net.createServer(function(socket) {
     socket.on('data',()=>{
 	    socket.write('pong\r\n');        
     })
+    socket.on('error',()=>{})
 });
 
 server.listen(7777);
